@@ -1,0 +1,18 @@
+App\Entity\User:
+  constraints:
+    - EnableAutoMapping: ~
+  properties:
+    name:
+      - Required:
+      - NotBlank:
+      - Length: { min: 8, max: 64 }
+      - Regex: { pattern: '/^[a-z0-9]+$/'}
+      - App\Validator\AllowedNameConstraint:
+    email:
+      - Required:
+      - NotBlank:
+      - Email:
+      - Length: { max: 256 }
+      - App\Validator\EmailReliabilityConstraint:
+    notes:
+      - Type: { type: string }

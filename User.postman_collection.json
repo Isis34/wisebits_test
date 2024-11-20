@@ -1,0 +1,281 @@
+{
+	"info": {
+		"_postman_id": "0047c2e6-5c5b-4ef0-8f12-491e0230354e",
+		"name": "User",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "39854905"
+	},
+	"item": [
+		{
+			"name": "http://127.0.0.1:8000/user/",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"zina1109800981\",\n    \"notes\": \"asdsd\",\n    \"email\": \"some_email@gmail.com\"\n   \n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/user"
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:8000/user/create",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"zina109800981\",\n    \"notes\": \"asdsd\",\n    \"email\": \"new1@gmail.com\"\n   \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/user"
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Nov 2024 02:49:52 GMT"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.8"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "noindex"
+						},
+						{
+							"key": "Content-Length",
+							"value": "91"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"errors\": {\n        \"name\": [\n            \"This value is already used.\"\n        ],\n        \"email\": [\n            \"This value is already used.\"\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "http://127.0.0.1:8000/user/2",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"zina10980098\",\n    \"notes\": \"asdsd, asdsa;dlk\",\n    \"email\": \"new@gmail.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://127.0.0.1:8000/user/2"
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:8000/user/",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"zina10980098\",\n    \"notes\": \"asdsd, asdsa;dlk\",\n    \"email\": \"new@gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://127.0.0.1:8000/user/9"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 19 Nov 2024 21:17:24 GMT"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.8"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "noindex"
+						},
+						{
+							"key": "Content-Length",
+							"value": "134"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 9,\n    \"name\": \"zina10980098\",\n    \"email\": \"new@gmail.com\",\n    \"created\": \"2024-11-19T20:44:27+00:00\",\n    \"deleted\": null,\n    \"notes\": \"asdsd, asdsa;dlk\"\n}"
+				}
+			]
+		},
+		{
+			"name": "http://127.0.0.1:8000/user/2",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/user/10"
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:8000/user/2",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": "http://127.0.0.1:8000/user/10"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Nov 2024 03:11:31 GMT"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.8"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "noindex"
+						},
+						{
+							"key": "Content-Length",
+							"value": "126"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 10,\n    \"name\": \"zina109800981\",\n    \"email\": \"new1@gmail.com\",\n    \"created\": \"2024-11-20T02:29:14+00:00\",\n    \"deleted\": null,\n    \"notes\": \"asdsd\"\n}"
+				}
+			]
+		},
+		{
+			"name": "http://127.0.0.1:8000/user/2",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "http://127.0.0.1:8000/user/2"
+			},
+			"response": [
+				{
+					"name": "http://127.0.0.1:8000/user/2 Copy",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://127.0.0.1:8000/user/2"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Nov 2024 02:29:44 GMT"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.8"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "noindex"
+						},
+						{
+							"key": "Content-Length",
+							"value": "22"
+						}
+					],
+					"cookie": [],
+					"body": "\"Successfully deleted\""
+				},
+				{
+					"name": "http://127.0.0.1:8000/user/9",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://127.0.0.1:8000/user/9"
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 20 Nov 2024 03:11:45 GMT"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/8.2.8"
+						},
+						{
+							"key": "X-Robots-Tag",
+							"value": "noindex"
+						},
+						{
+							"key": "Content-Length",
+							"value": "39"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"errors\": [\n        \"User with id 9 not found\"\n    ]\n}"
+				}
+			]
+		}
+	]
+}

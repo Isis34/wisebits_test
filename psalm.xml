@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<psalm
+        errorLevel="3"
+        resolveFromConfigFile="true"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="https://getpsalm.org/schema/config"
+        xsi:schemaLocation="https://getpsalm.org/schema/config"
+        findUnusedBaselineEntry="true"
+        findUnusedCode="true"
+>
+    <projectFiles>
+        <directory name="src"/>
+        <ignoreFiles>
+            <directory name="vendor"/>
+        </ignoreFiles>
+    </projectFiles>
+    <issueHandlers>
+        <UnusedClass>
+            <errorLevel type="info">
+                <directory name="src"/>
+            </errorLevel>
+        </UnusedClass>
+        <PossiblyUnusedParam>
+            <errorLevel type="info">
+                <directory name="src"/>
+            </errorLevel>
+        </PossiblyUnusedParam>
+        <MissingConstructor>
+            <errorLevel type="suppress">
+                <directory name="src"/>
+            </errorLevel>
+        </MissingConstructor>
+        <UndefinedAttributeClass>
+            <errorLevel type="suppress">
+                <directory name="src/Entity"/>
+            </errorLevel>
+        </UndefinedAttributeClass>
+        <UnusedMethod>
+            <errorLevel type="info">
+                <directory name="src"/>
+            </errorLevel>
+        </UnusedMethod>
+        <PossiblyNullArgument>
+            <errorLevel type="info">
+                <directory name="src"/>
+            </errorLevel>
+        </PossiblyNullArgument>
+    </issueHandlers>
+</psalm>
