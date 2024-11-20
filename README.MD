@@ -24,7 +24,7 @@
    - запустить ``symfony server:start``
 
 ### Для запуска тестов: 
-- необходимо поправить переменную окружения ``DATABASE_URL`` в .env
+- необходимо поправить переменную окружения ``DATABASE_URL`` в .env.test
 - запустить ``php bin/console doctrine:database:create --env=test``
 - накатить миграцию ``php bin/console doctrine:migrations:migrate --env=test``
 - создать фикстуры ``php bin/console --env=test doctrine:fixtures:load``
